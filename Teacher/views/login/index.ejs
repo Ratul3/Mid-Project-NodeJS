@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+   <title>LOGIN</title>
+    <link rel="stylesheet" type="text/css" href="def/style.css">
+	
+		<script type="text/javascript">
+function validate()
+{
+	var name = document.forms["logform"]["uname"].value;
+if(name==""){
+	alert("Username Can't Be Empty");
+return false;
+
+}
+var password = document.forms["logform"]["password"].value;
+
+if(password==""){
+	alert("Password Can't Be Empty");
+return false;
+
+}
+var type = document.forms["logform"]["type"].value;
+
+if(type==""){
+	alert("Type Can't Be Empty");
+return false;
+
+}
+	
+	
+}
+</script>
+</head>
+<body>
+		<form name="logform" onsubmit="return validate()" method="POST">
+			<fieldset>
+			<center><img src="def/def.jpg" height="150px" width="200px" ></center>
+				<center><h1>LOGIN</h1></center>
+				<table>
+					<tr>
+				
+						<td><b>Username</b></td>
+						<td><input type="text" name="uname"></td>
+						
+					</tr>
+					<tr>
+						<td><b>Password</b></td>
+						<td><input type="password" name="password"></td>
+					
+					</tr>
+					<td><b>User Type</b></td>	
+				        <td><input type="radio" name="type" value="admin" />Admin
+						<input type="radio" name="type" value="tp" />Tution Provider
+						<input type="radio" name="type" value="teacher" />Teacher
+						<input type="radio" name="type" value="student" />Student</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input type="submit" name="submit" value="Submit">
+						<a href="/registration">Registration</a></td>
+					</tr>
+				</table>
+			</fieldset>
+		</form>
+</body>
+</html>

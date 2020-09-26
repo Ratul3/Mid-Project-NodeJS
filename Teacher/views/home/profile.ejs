@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PROFILE</title>
+
+</head>
+<body>
+	
+			<fieldset>
+				<legend><h1>PROFILE</h1></legend>
+				<center><img src="/assets/<%= userList.picture %>"  height='180' width='150'/></center>
+				<table>
+	
+		<tr>
+			<td><b>ID: </b></td>
+			<td><%= userList.id %></td>
+		</tr>
+<tr>		
+			<td><b>Username: </b></td>
+			<td><%= userList.username %></td>
+			</tr>
+			<tr>
+			<td><b>Password: </b></td>
+			<td><%= userList.password %></td>
+			</tr>
+			<tr>
+			<td><b>Email: </b></td>
+				<td><%= userList.email %></td>
+			</tr>
+			<tr>
+			<td><b>Gender: </b></td>
+			<td><%= userList.gender %></td>
+			</tr>
+			<tr>
+			<td><b>Education: </b></td>
+			<td><%= userList.education %></td>
+			</tr>
+			<tr>
+			<td><b>Type: </b></td>
+			
+		<td><%= userList.type %></td>
+		</tr>
+
+	</table><br/>
+			
+			
+	<a href="/home/profile/edit/<%= userList.id %>">Update</a>				
+	<a href ="/home">Back</a>	
+	</fieldset>
+</body>
+</html>

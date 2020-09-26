@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TP_HOMEPAGE</title>
+<style rel="stylesheet">
+body
+{
+	background: rgb(255,250,22);
+}
+#nametp
+{
+	text-align: center;
+	font-size: 30px;
+	margin: -10px auto;
+	padding-top: -10px;
+	font-family: IMPACT;
+	color: rgb(0,255,0);
+	background: black;
+}
+#TP_main h1
+{
+	text-align: center;
+	font-size: 40px;
+	margin: -10px auto;
+	padding-top: -10px;
+	font-family:Goudy Stout;
+	color: white;
+	background: rgb(112,48,160);
+}
+#TP_main
+{
+  text-align: center;
+  min-width: 1000px;
+  height: 560px;
+  margin: 0px auto;
+  padding-bottom: 0px;
+  border: 30px solid blue;
+  border-radius: 15px;
+  color: black;
+  font-size: 30px;
+  background: rgb(255,255,102);
+}
+
+#table
+{
+  text-align: center;
+  min-width: 1300px;
+  height: 600px auto;
+  padding-left: -20px;
+  border: 1px solid #918274;
+  border-radius: 20px;
+  color: yellow;
+  font-size: 30px;
+  background: rgb(255,255,102);
+}
+
+#linker
+a
+{
+  min-width: 1275px;
+  font-family: "Algerian";
+  font-size: 25px;
+  color: rgb(246,142,56);
+  background: black;
+  border: 10px solid;
+  border-radius: 15px;
+}
+#linker:hover {
+  color: purple;
+  background-color: purple;
+}
+
+
+#lin1
+a
+{
+  min-width: 1300px;
+  font-family: "Copperplate Gothic Bold";
+  font-size: 25px;
+  color: rgb(246,142,56);
+  background: black;
+  border: 5px solid;
+  border-radius: 10px;
+}
+#lin1:hover {
+  color: blue;
+  background-color: blue;
+}
+
+#lin2
+a
+{
+	min-width: 1300px;
+	font-family: "Copperplate Gothic Bold";
+	font-size: 25px;
+	color: rgb(246,142,56);
+	background: black;
+	border: 5px solid;
+	border-radius: 10px;
+}
+#lin2:hover {
+  color: green;
+  background-color: green;
+}
+
+#lin3
+a
+{
+	min-width: 1300px;
+	font-family: "Copperplate Gothic Bold";
+	font-size: 25px;
+	color: rgb(246,142,56);
+	background: black;
+	border: 5px solid;
+	border-radius: 10px;
+}
+#lin3:hover {
+  color:red;
+  background-color: red;
+}
+/*
+.tia
+{
+	color: rgb(71,7,135);
+	margin-top: -15px;
+	padding-bottom: 20px;
+	font-family: "Showcard Gothic";
+} */
+
+.logout
+a
+{
+	min-width: 1300px;
+	font-family: "Copperplate Gothic Bold";
+	font-size: 25px;
+	color: rgb(246,142,56);
+	background: black;
+	border: 15px solid;
+	border-radius: 10px;
+}
+.logout:hover {
+  color:black;
+  background-color: skyblue;
+}
+</style>
+
+</head>
+<body><center>
+		<div id="TP_main">
+		<table border="8" id="table">
+			<tr>
+				<td>
+					<h1><center>Welcome to<br>TUTION PROVIDER arena !~_~!</center></h1><br>
+					<div id="nametp">USERNAME:	<%= uname %></div><br>
+				</td>
+			</tr>
+
+			<tr>
+
+				<td>
+				<div id="linker">
+				<a href="/dashboard/TP_Lists"> TUiTiON PROVIDERS</a> ~~~~~~
+				<a href="/dashboard/TP_Profile"> MY ~ PROFILE</a>
+				</div>
+				<br>
+				<div id="lin1">
+					<a href="/dashboard/TP_Available_Tuitions"> PROViDED ~ TUiTiONS</a>~~~
+				<a href="/dashboard/TP_Offered"> OFFERED ~ TUiTiONS</a>--------
+				<a href="/dashboard/TP_Teacher_List"> AVAiLABLE ~ TUTORS</a>
+				</div>
+				<br>
+				<div id="lin2">
+				<a href="/dashboard/TP_Teacher_Schedules"> SCHEDULES of TEACHER</a> ~~~
+				<a href="/dashboard/TP_Student_List"> AVAiLABLE STUDENTS</a>-
+				<a href="/dashboard/TP_Student_Schedules"> SCHEDULES of STUDENTS</a>
+				</div>
+				<br>
+				<div id="lin3">
+				<a href="/dashboard/TP_MessagetoAdmin"> COMPLAiNTS TO ADMiN</a> --
+				<a href="/dashboard/TP_ratings"> RATiNGS OF TEACHERS_STUDENTS</a> --
+				<a href="/dashboard/TP_CONTACT_AREA"> CONTACT ARENA</a>
+				</div>
+				<br>
+				<div class="logout"><a href="/LogouT"> L O G O U T</a></div>
+				</td>
+
+			</tr>
+
+		</table>
+		</div>
+</center></body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TP LIST</title>
+
+<style type="text/css">
+
+	table{
+	border-collapse: collapse;
+	width: 100%;
+	color: white;
+	background-color: blue;
+	font-style: "Arial Rounded MT Bold";
+	font-size: 20px;
+	text-align: center;
+	}
+
+</style>
+
+</head>
+
+<body><center>
+	<form>
+
+	<table border="5">
+		<tr>
+			<!-- <td><h1><center><a href="/dashboard/TP_Lists/insert">ADD NEW TP</a></center></h1></td> -->
+			<td colspan="8"><h1>TUITION PROVIDERS</h1><br>
+            TOTAL TUITION PROVIDERS: <%= tp.length %>
+      </td>
+		</tr>
+
+		<tr>
+			<th>ID</th>
+			<th>TP_FULL_NAME</th>
+			<th>TP_User_NAME</th>
+			<th>Email</th>
+			<th>Gender</th>
+			<th>Education</th>
+			<th colspan="7">ACTiONS</th>
+		</tr>
+
+		<% for(var i=0; i < tp.length; i++){ %>
+		<tr>
+			<td><%= tp[i].id %></td>
+			<td><%= tp[i].fname %></td>
+			<td><%= tp[i].username %></td>
+			<td><%= tp[i].email %></td>
+			<td><%= tp[i].gender %></td>
+			<td><%= tp[i].education %></td>
+			<td colspan="7"><center>
+				<a href="/dashboard/TP_Lists/edit/<%= tp[i].id%>">U P D A T E</a>
+			</center></td>
+		</tr>
+		<% } %>
+
+		<tr>
+				<td colspan="8"><a href="/dashboard">H O M E</a></td>
+		</tr>
+			</table>
+
+		</form>
+</center></body>
+</html>

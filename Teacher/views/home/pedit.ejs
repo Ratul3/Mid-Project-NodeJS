@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UPDATE PROFILE</title>
+	<script type="text/javascript">
+function valid()
+{
+var name = document.forms["myform"]["username"].value;
+
+
+
+if(name==""){
+	alert("Username Can't Be Empty");
+return false;
+
+}
+
+
+
+if(name.length<3){
+	alert("Username Can;t Be Less Than 3 Letters");
+return false;
+
+}
+
+
+else{
+for(i=0;i<name.length;i++)
+{ch=name.charAt(i);
+if(!(ch>='a'&&ch<='z')&&!(ch>='A'&&ch<='Z')&&!(ch>='0'&&ch<='9'))
+{
+
+	alert("Username Can't Contain Special Characters");
+	
+}
+}
+}
+
+var password = document.forms["myform"]["password"].value;
+
+if(password==""){
+	alert("Password Can't Be Empty");
+return false;
+
+}
+
+if(password.length<6){
+	alert("Password Can't Be Less Than 6 Characters or Digits");
+return false;
+
+}
+
+
+
+
+
+var email = document.forms["myform"]["email"].value;
+if(email==""){
+	alert("Email Can't Be Empty");
+return false;
+
+}
+
+
+var at=email.indexOf('@');
+var dot=email.lastIndexOf('.');
+if(at<=0 || at+1 >= dot || dot+1 >=email.length-1)
+
+{
+alert("Enter Valid Email Address");
+return false;
+
+}
+
+
+
+
+var gender = document.forms["myform"]["gender"].value;
+
+if(gender==""){
+	alert("Gender Can't Be Empty");
+return false;
+
+}
+
+var education = document.forms["myform"]["education"].value;
+
+if(education==""){
+	alert("Education Can't Be Empty");
+return false;
+
+}
+
+
+
+
+var type = document.forms["myform"]["type"].value;
+
+if(type==""){
+	alert("Type Can't Be Empty");
+return false;
+
+}
+
+
+
+
+
+
+}
+</script>
+
+
+</head>
+<body>
+	<div>
+		<h1>UPDATE PROFILE</h1> 		
+	</div>
+
+	
+
+	<form name="myform" onsubmit="return valid()" method="post">
+		<table>
+			<tr>
+				<td>Id</td>
+				<td><input type="text" readonly name="id" value="<%=user.id%>"></td>
+			</tr>
+			<tr>
+				<td>Username</td>
+				<td><input type="text" name="username" value="<%=user.username%>"></td>
+			</tr>
+			<tr>
+				<td>Password :</td>
+				<td><input type="text" name="password" value="<%=user.password%>"></td>
+			</tr>
+			<tr>
+			<tr>
+				<td>Email :</td>
+				<td><input type="text" name="email" value="<%=user.email%>"></td>
+			</tr>
+			<tr>
+			<tr>
+				<td>Gender :</td>
+				<td><input type="text" name="gender" value="<%=user.gender%>"></td>
+			</tr>
+			<tr>
+			<tr>
+				<td>Education :</td>
+				<td><input type="text" name="education" value="<%=user.education%>"></td>
+			</tr>
+			<tr>
+			
+				<td>Type :</td>
+				<td><input type="text" name="type" value="<%=user.type%>"></td>
+			</tr>
+			<tr>
+				
+				<td><input type="submit" name="submit" value="Update"></td>
+				<td><a href="/home/profile">Go to Profile</a></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

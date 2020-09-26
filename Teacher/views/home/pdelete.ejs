@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DELETE NOTICE</title>
+	<link rel="stylesheet" type="text/css" href="abc/style.css">
+
+</head>
+<body>
+	
+	
+	
+	
+	<fieldset>
+	<h1>DELETE NOTICE</h1>
+
+	<form method="post">
+		<table border="1">
+		<tr>
+				<td>id</td>
+				<td><%= user.id %></td>
+			</tr>
+			<tr>
+				<td>name</td>
+				<td><%= user.name %></td>
+			</tr>
+			<tr>
+				<td>grade</td>
+				<td><%= user.notice %></td>
+			</tr>
+			<tr>
+				<td>date</td>
+				<td><%= user.date %></td>
+			</tr>
+			
+			
+		</table>
+		<font color="red"><h3>Are you sure? This can't be undone!</h3></font>
+		<input type="hidden" name="id" value="<%= user.id %>">
+		<input type="submit" name="submit" value="confirm">
+		<a href="/home/notices/post/postednotices">Check List Here</a>
+	</form>
+	 
+</body>
+</html>

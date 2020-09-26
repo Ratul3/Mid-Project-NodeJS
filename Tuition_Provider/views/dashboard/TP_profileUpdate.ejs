@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UPDATE PROFILE</title>
+	<script type="text/javascript">
+function valid()
+{
+var name = document.forms["tpform"]["name"].value;
+
+
+
+if(name==""){
+	alert("Username is BLANK!!");
+	return false;
+}
+
+if(name.length<3){
+	alert("Username must be at least 3 Letters");
+	return false;
+}
+else{
+	return true;
+}
+
+var email = document.forms["tpform"]["email"].value;
+if(email==""){
+	alert("Email is BLANK!!");
+return false;
+
+}
+
+var at=email.indexOf('@');
+var dot=email.lastIndexOf('.');
+if(at<=0 || at+1 >= dot || dot+1 >=email.length-1)
+{
+	alert("Enter Valid Email Address");
+	return false;
+}
+
+var gender = document.forms["tpform"]["gender"].value;
+
+if(gender==""){
+	alert("Gender is BLANK!!");
+	return false;
+
+}
+
+var age = document.forms["tpform"]["age"].value;
+
+if(age==""){
+	alert("AGE is BLANK!!");
+	return false;
+
+}
+
+var education = document.forms["tpform"]["education"].value;
+
+if(education==""){
+	alert("Education is BLANK!!");
+	return false;
+
+}
+
+var bg = document.forms["tpform"]["bg"].value;
+
+if(bg==""){
+	alert("BLOOD_GROUP is BLANK!!");
+	return false;
+}
+
+
+var LA = document.forms["tpform"]["LA"].value;
+
+if(LA==""){
+	alert("ADDRESS is BLANK!!");
+return false;
+}
+
+var Up = document.forms["tpform"]["Up"].value;
+
+if(Up==""){
+	alert("Upload is BLANK!!");
+return false;
+
+}
+
+function onlyalphabets(e)
+{
+		var name=e.which||e.keycode;
+
+
+/*ASCII code: 		65-90>> UPPERCASE
+					8>>   	Backspace,
+					95>>  	underscore[_]
+					32>>	space
+*/
+
+		if((name>=65 && name<=90) || (name==95) || (name==32) || (name>=97 && name<=122) || (name==8))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+
+}
+
+}
+
+</script>
+
+</head>
+
+<body><center>
+
+	<div>
+		<h1>UPDATE PROFILE</h1><br>
+	</div>
+
+	 <form name="tpform" onsubmit="return valid()" action="/dashboard/TP_profileUpdate" method="post" enctype="multipart/form-data">
+
+		<table border="3">
+
+			<tr>
+				<td>ID</td>
+				<td><input type="text" readonly name="id" value="<%=pupdate.id%>"></td>
+			</tr>
+
+			<tr>
+				<td>Username</td>
+				<td><input type="text" name="name" value="<%=pupdate.Name%>" onkeypress='return onlyalphabets(event)' ></td>
+			</tr>
+
+			<tr>
+				<td>Email :</td>
+				<td><input type="text" name="email" value="<%=pupdate.Email%>"></td>
+			</tr>
+
+			<tr>
+				<td>Gender :</td>
+				<td><input type="text" name="gender" value="<%=pupdate.Gender%>"></td>
+			</tr>
+
+			<tr>
+				<td>AGE :</td>
+				<td><input type="number" name="age" value="<%=pupdate.Age%>"></td>
+			</tr>
+
+			<tr>
+				<td>Education :</td>
+				<td><input type="text" name="education" value="<%=pupdate.Education%>"></td>
+			</tr>
+
+			<tr>
+				<td>Blood_Group :</td>
+				<td><input type="text" name="bg" value="<%=pupdate.Blood_Group%>"></td>
+			</tr>
+
+			<tr>
+				<td>ADDRESS :</td>
+				<td><input type="text" name="LA" value="<%=pupdate.Living_Area%>"></td>
+			</tr>
+
+			<tr>
+					<td><center><b>UPLOAD PROFILE_PICTURE:</center></b></td>
+					<td><input type="file" name="file">
+					<input type="submit" name="submit" value="UpLOAD"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" name="submit" value="UPDATE"></td>
+				<td><a href="/dashboard/TP_Profile">TP_PROFILE</a></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

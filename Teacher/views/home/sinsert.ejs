@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>INSERT SALARY</title>
+	<link rel="stylesheet" type="text/css" href="abc/style.css">
+	<script type="text/javascript">
+function valid()
+{
+var id = document.forms["myform"]["id"].value;
+if(id==""){
+	alert("ID Can't Be Empty");
+return false;
+
+}
+
+
+
+
+var name = document.forms["myform"]["uname"].value;
+
+
+
+if(name==""){
+	alert("Name Can't Be Empty");
+return false;
+
+}
+
+
+
+
+
+
+
+
+
+
+var salary = document.forms["myform"]["salary"].value;
+
+if(salary==""){
+	alert("Salary Can't Be Empty");
+return false;
+
+}
+
+
+
+
+
+
+}
+</script>
+</head>
+<body>
+	
+	
+	
+	<fieldset>
+	
+	<h1>INSERT SALARY</h1>
+
+	<form name="myform" onsubmit="return valid()" method="POST">
+	
+		<table>
+		<tr>
+				<td>id</td>
+				<td><input type="text" name="id"></td>
+			</tr>
+		
+			<tr>
+				<td>name</td>
+				<td><input type="text" name="uname"></td>
+			</tr>
+			<tr>
+				<td>salary</td>
+				<td><input type="text" name="salary"></td>
+			</tr>
+			
+			<tr>
+				
+				<td><input type="submit" name="submit" value="Insert"></td>
+				<td><a href="/home/salary">Check List Here</a> </td>
+			</tr>
+		</table>
+		
+	</form>
+	</fieldset>
+</body>
+</html>

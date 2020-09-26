@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TP PROFILE</title>
+
+<style type="text/css">
+
+	table{
+	border-collapse: collapse;
+	width: 100%;
+	color: white;
+	background-color: blue;
+	font-style: "Arial Rounded MT Bold";
+	font-size: 20px;
+	text-align: center;
+	}
+	#td
+	{
+		color: blue;
+		background-color: whitesmoke;
+		font-size: 23px;
+	}
+	#wh
+	{
+		color: green;
+		background-color: black;
+		font-size: 25px;
+	}
+	#wp
+	{
+		color: whitesmoke;
+		background-color: red;
+		border: 5px solid;
+		border-color: yellow;
+		border-radius: 5px solid;
+		font-size: 25px;
+	}
+	#wp a
+	{
+		color: whitesmoke;
+		background-color: red;
+	}
+
+
+</style>
+
+</head>
+
+<body><center>
+	<form>
+
+	<table border="5">
+		<tr>
+			<td colspan="2"><h1>TP_PROFILE</h1>
+      </td>
+		</tr>
+
+		<% for(var i=0; i < profile.length; i++){ %>
+
+		<tr>
+			<td>ID</td>
+			<td><div id="td"><%= profile[i].id %></div></td>
+		</tr>
+
+		<tr>
+			<td>USERNAME</td>
+			<td><div id="td"><%= profile[i].Name %></div></td>
+		</tr>
+
+		<tr>
+		<td>EMAiL</td>
+			<td><div id="td"><%= profile[i].Email %></div></td>
+		</tr>
+
+		<tr>
+			<td>Gender</td>
+			<td><div id="td"><%=profile[i].Gender %></div></td>
+		</tr>
+
+		<tr>
+			<td>AGE</td>
+			<td><div id="td"><%= profile[i].Age %></div></td>
+		</tr>
+
+		<tr>
+			<td>Education_Status</td>
+			<td><div id="td"><%= profile[i].Education %></div></td>
+		</tr>
+
+		<tr>
+			<td>Blood_Group</td>
+			<td><div id="td"><%= profile[i].Blood_Group %></div></td>
+		</tr>
+
+		<tr>
+			<td>Living_Area</td>
+			<td><div id="td"><%= profile[i].Living_Area %></div></td>
+		</tr>
+
+		<tr>
+			<td><div id="wp">UPLOADED_Pic</div></td>
+			<td><div id="wp"><a href='/assets/<%= profile[i].filename %>'><%= profile[i].filename %></a></div></td>
+		</tr>
+
+
+		<tr>
+			<td><div id="wp"><a href="/dashboard">H O M E</a></div></td>
+			<td colspan="2"><center>
+				<div id="wh"><a href="/dashboard/TP_Profile/edit/<%= profile[i].id %>"> U P D A T E</a></div>
+			</center></td>
+		</tr>
+
+		<% } %>
+
+	</table>
+
+		</form>
+</center></body>
+</html>

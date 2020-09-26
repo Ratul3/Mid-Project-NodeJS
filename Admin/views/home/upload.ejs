@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UPLOAD NOTES</title>
+<script type="text/javascript">
+function validate()
+{var file = document.forms["logform"]["file"].value;
+if(file==""){
+	alert("File Can't Be Empty");
+return false;
+}
+}	
+</script>
+</head>
+<body>
+<fieldset>
+	<h1>UPLOAD NOTES</h1>	
+	<form name="logform" onsubmit="return validate()" method="POST" action="/home/upload" enctype="multipart/form-data">
+	<input type="file" name="file"/>
+	<input type="submit" name="submit" value="Upload"/><br/><br/>
+<a href="/home/upload/notes">Check List Here</a><br/><br/>
+		<a href="/home">Back</a>
+	</fieldset>	
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SCHEDULE</title>
+
+	<style type="text/css">
+	table{
+	border-collapse: collapse;
+	width: 100%;
+	color: #d96459;
+	font-family: monospace;
+	font-size: 25px;
+	text-align: left;
+	}
+	th{
+		background-color: #d96459;
+		color: white;
+		}
+		tr:nth-child(even) {background-color: #f2f2f2;}
+
+</style>
+
+</head>
+<body>
+<fieldset>
+	<div id="ph">
+
+
+				<legend><h1>SCHEDULE</h1></legend>
+				No. of Students: <%= results.length %>
+				<br/><br/>
+
+			<table border="1">
+		<tr>
+			<th>id</th>
+			<th>name</th>
+			<th>day</th>
+			<th>time</th>
+			<th>operations</th>
+
+		</tr>
+      <% for(var i=0; i < results.length; i++){ %>
+
+		<tr>
+			<td><%= results[i].id %></td>
+			<td><%= results[i].name %></td>
+			<td><%= results[i].day %></td>
+			<td><%= results[i].time %></td>
+
+			<td><a href="/home/schedule/edit/<%= results[i].id %>">Edit</a> | <a href="/home/schedule/delete/<%= results[i].id %>"> Delete </a></td>
+		</tr>
+		<% } %>
+	</table>
+	</div>
+	<br/>
+		<a href ='/home/schedule/insert'>Insert</a>	<a href="javascript:pdfToHTML()">Save as PDF</a><br/><br/>
+		<a href ='/home'>Back</a>
+	</fieldset>
+
+</body>
+
+
+<script src="/assets/jquery-2.1.3.js"></script>
+<script src="/assets/pdfFromHTML.js"></script>
+<script src="/assets/jspdf.js"></script>
+</html>

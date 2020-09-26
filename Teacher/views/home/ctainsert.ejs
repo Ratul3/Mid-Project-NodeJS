@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>INSERT COMPLAIN</title>
+	<link rel="stylesheet" type="text/css" href="abc/style.css">
+	<script type="text/javascript">
+function valid()
+{
+
+
+
+
+var name = document.forms["myform"]["uname"].value;
+
+
+
+if(name==""){
+	alert("Complain Can't Be Empty");
+return false;
+
+}
+
+
+
+
+
+
+}
+</script>
+</head>
+<body>
+	
+	
+	
+	<fieldset>
+	
+	<h1>TYPE HERE TO COMPLAIN</h1>
+
+	<form name="myform" onsubmit="return valid()" method="POST">
+	
+		<table>
+		
+				
+				<td><input type="text" name="uname"></td>
+				
+			</tr>
+			
+				
+				<td><input type="submit" name="submit" value="Submit">
+				<a href="/home/cta/ctacheck">Check List Here</a> </td>
+			</tr>
+		</table>
+		
+	</form>
+	</fieldset>
+</body>
+</html>

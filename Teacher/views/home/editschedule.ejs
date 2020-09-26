@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UPDATE SCHEDULE</title>
+	<script>
+function valid()
+{
+var id = document.forms["myform"]["id"].value;
+if(id==""){
+	alert("ID Can't Be Empty");
+return false;
+
+}
+
+
+
+
+var name = document.forms["myform"]["name"].value;
+
+
+
+if(name==""){
+	alert("Name Can't Be Empty");
+return false;
+
+}
+
+
+
+
+
+
+
+
+
+
+var salary = document.forms["myform"]["day"].value;
+
+if(day==""){
+	alert("Day Can't Be Empty");
+return false;
+
+}
+
+var time = document.forms["myform"]["time"].value;
+
+if(time==""){
+	alert("Time Can't Be Empty");
+return false;
+
+}
+
+
+
+
+}
+</script>
+</head>
+<body>
+	<fieldset>
+		<h1>UPDATE SALARY</h1> 		
+	
+
+	
+	
+
+	<form name="myform" onsubmit="return valid()" method="POST">
+		<table>
+			<tr>
+				<td>id</td>
+				<td><input type="text" readonly name="id" value="<%=user.id%>"></td>
+			</tr>
+			<tr>
+				<td>name</td>
+				<td><input type="text" name="name" value="<%=user.name%>"></td>
+			</tr>
+			<tr>
+				<td>day</td>
+				<td><input type="text" name="day" value="<%=user.day%>"></td>
+			</tr>
+			<tr>
+				<td>time</td>
+				<td><input type="text" name="time" value="<%=user.time%>"></td>
+			</tr>
+			
+			<tr>
+				
+				<td><input type="submit" name="submit" value="Update"></td>
+				<td><a href="/home/schedule">Check List Here</a> </td>
+			</tr>
+		</table>
+	</form>
+	
+	</fieldset>
+</body>
+</html>

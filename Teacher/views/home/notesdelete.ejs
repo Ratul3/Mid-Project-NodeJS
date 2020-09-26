@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DELETE NOTE</title>
+	<link rel="stylesheet" type="text/css" href="abc/style.css">
+
+</head>
+<body>
+	
+	
+	
+	
+	<fieldset>
+	<h1>DELETE NOTE</h1>
+
+	<form method="post">
+		<table border="1">
+		<tr>
+				<td>id</td>
+				<td><%= user.id %></td>
+			</tr>
+			<tr>
+				<td>student_name</td>
+				<td><%= user.student_name %></td>
+			</tr>
+			<tr>
+				<td>filename</td>
+				<td><%= user.filename %></td>
+			</tr>
+		
+		</table>
+		<font color="red"><h3>Are you sure? This can't be undone!</h3></font>
+		<input type="hidden" name="id" value="<%= user.id %>">
+		<input type="submit" name="submit" value="confirm">
+		<a href="/home/upload/notes">Check List Here</a>
+	</form>
+	 
+</body>
+</html>

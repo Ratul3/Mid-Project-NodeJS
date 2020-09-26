@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>REGISTRATION</title>
+<link rel="stylesheet" type="text/css" href="abc/style.css">
+	<script type="text/javascript">
+function valid()
+{
+var uname = document.forms["myform"]["uname"].value;
+
+
+
+if(uname==""){
+	alert("Username Can't Be Empty");
+return false;
+
+}
+
+
+
+if(uname.length<3){
+	alert("Username Can't Be Less Than 3 Letters");
+return false;
+
+}
+
+
+
+
+var password = document.forms["myform"]["password"].value;
+
+if(password==""){
+	alert("Password Can't Be Empty");
+return false;
+
+}
+
+if(password.length<6){
+	alert("Password Can't Be Less Than 6 Characters or Digits");
+return false;
+
+}
+
+
+
+
+
+var email = document.forms["myform"]["email"].value;
+if(email==""){
+	alert("Email Can't Be Empty");
+return false;
+
+}
+
+
+var at=email.indexOf('@');
+var dot=email.lastIndexOf('.');
+if(at<=0 || at+1 >= dot || dot+1 >=email.length-1)
+
+{
+alert("Enter Valid Email Address");
+return false;
+
+}
+
+
+
+
+var gender = document.forms["myform"]["gender"].value;
+
+if(gender==""){
+	alert("Gender Can't Be Empty");
+return false;
+
+}
+
+var education = document.forms["myform"]["education"].value;
+
+if(education==""){
+	alert("Education Can't Be Empty");
+return false;
+
+}
+
+
+
+var type = document.forms["myform"]["type"].value;
+
+if(type==""){
+	alert("Type Can't Be Empty");
+return false;
+
+}
+var blocked=document.forms["myform"]["blocked"].value;
+
+if(blocked==""){
+	alert("Block status can not be empty");
+return false;
+
+}
+
+
+
+
+
+}
+</script>
+
+</head>
+<body>
+
+
+			
+	<fieldset>
+	
+	<form name="myform" onsubmit="return valid()" method="POST">
+	<center><img src="abc/abc.jpg" height="150px" width="200px" ></center>
+		<center><h1>REGISTRATION</h1></center>
+		
+		<font color='red'>**Reuirement of the field </font><a href="/registration/rules">Rules</a>	
+		
+		<br/><br/>	
+		<table>	
+		<tr>
+		<td><b>Username</b></td>
+		<td><input type="text" name="uname" value=""></td>
+		<td> </td>
+		<td> </td>
+		<td> </td>
+		</tr>
+		<tr>
+			<td><b>Password</b></td>
+			<td><input type="password" name="password" value=""></td>
+			<td> </td>
+			<td> </td>
+			<td> </td>
+			</tr>
+		<tr>	
+		<td><b>Email</b></td>
+		<td><input type="email" name="email" value=""></td>
+		<td> </td>
+		<td> </td>
+		<td> </td>
+		</tr>
+				
+			
+	<tr>
+	<td><b>Gender</b></td>
+	<td><input type="radio" name="gender" value="M">Male
+	<input type="radio" name="gender" value="F">Female</td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+		</tr>
+			
+			
+			<tr>
+			<td><b>Education</b></td>
+			<td><input type="radio" name="education" value="ssc">S.S.C
+			<input type="radio" name="education" value="hsc">H.S.C
+			<input type="radio" name="education" value="bsc">B.Sc</td>
+						<td> </td>
+						<td> </td>
+						<td> </td>
+						</tr>
+				<tr><td><b>User Type	</b></td>	
+				<td><input type="radio" name="type" value="admin">Admin
+						<input type="radio" name="type" value="tp" />Tution Provider
+						<input type="radio" name="type" value="teacher" />Teacher
+						<input type="radio" name="type" value="student" />Student
+						<td> </td>
+						<td> </td>
+						<td> </td>
+						</td></tr>
+				<tr>
+				<tr>
+	<td><b>Blocked ?</b></td>
+	<td><input type="radio" name="blocked" value="Yes">Yes
+	<input type="radio" name="blocked" value="No">No</td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+		</tr>
+				<td> </td>
+				<td><input type="submit" name="submit" value="Sign Up">
+				<input type="reset" name="reset" value="reset">
+				<a href="/login">Login</a>	</td>
+				
+				<td> </td>
+				<td> </td>
+				<td> </td>
+			</tr>
+	</table>
+	</form>
+	</fieldset>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UPDATE TPLIST</title>
+</head>
+<body><center>
+
+	<form onsubmit="return upCheck()" method="POST">
+
+    <table border="5">
+      <tr>
+        <td><h1>UPDATE TPLIST</h1></td>
+      </tr>
+
+      <tr>
+				<td>ID</td>
+				<td><input type="text" readonly name="id" value="<%=tp.id%>"></td>
+			</tr>
+			<tr>
+				<td>TP_FULL_Name</td>
+				<td><input type="text" name="tpfname" value="<%=tp.fname%>" onkeypress='return onlyalphabets(event)' ></td>
+			</tr>
+			<tr>
+				<td>USERNAME</td>
+				<td><input type="text" name="tpname" value="<%=tp.username%>" onkeypress='return onlyalphabets2(event)'></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input type="text" name="email" value="<%=tp.email%>"></td>
+			</tr>
+      <tr>
+				<td>GENDER</td>
+				<td><input type="text" name="gen" value="<%=tp.gender%>"></td>
+			</tr>
+      <tr>
+				<td>Education</td>
+				<td><input type="text" name="edu" value="<%=tp.education%>"></td>
+			</tr>
+      <tr></tr>
+			<tr>
+				<td><input type="submit" name="submit" value="UPDATE"></td>
+				<td><a href="/dashboard/TP_Lists">Check TPLIST</a> </td>
+			</tr>
+	</table>
+
+  </form>
+
+  <script type="text/javascript">
+
+      /*ASCII code: 65-90>> UPPERCASE
+      8>>   Backspace,
+      95>>  underscore[_]*/
+
+      function onlyalphabets(e)
+      {
+      var tpfname=e.which||e.keycode;
+        if((tpfname>=65 && tpfname<=90) || (tpfname==95) || (tpfname>=97 && tpfname<=122) || tpfname==8)
+        {
+          return true;
+        }
+        else
+        {
+          return false;
+        }
+      }
+  </script>
+
+  <script type="text/javascript">
+
+      /*ASCII code: 65-90>> UPPERCASE
+      8>>   Backspace,
+      95>>  underscore[_]*/
+
+      function onlyalphabets2(e)
+      {
+      var tpname=e.which||e.keycode;
+        if((tpname>=65 && tpname<=90) || (tpname==95) || (tpname>=97 && tpname<=122) || tpname==8)
+        {
+          return true;
+        }
+        else
+        {
+          return false;
+        }
+      }
+  </script>
+
+
+  <script>
+
+    function upCheck()
+    {
+      var tpname = document.getElementById('tpfname').value;
+      var uname = document.getElementById('tpname').value;
+      var email = document.getElementById('email').value;
+      var gen = document.getElementById('gen').value;
+      var edu = document.getElementById('edu').value;
+
+      if(tpname == "")
+      {
+        alert('PLEASE FILL THE TUTOR_NAME to proceed');
+        return false;
+      }
+      if(uname == "")
+      {
+        alert('PLEASE FILL THE userName area to proceed');
+        return false;
+      }
+      if(email == "")
+      {
+        alert('PLEASE FILL THE email to proceed');
+        return false;
+      }
+      if(gen == "")
+      {
+        alert('PLEASE FILL THE gender to proceed');
+        return false;
+      }
+      if(edu == "")
+      {
+        alert('PLEASE FILL THE education status to proceed');
+        return false;
+      }
+
+      if(tpname.length<8)
+      {
+        alert('TutorName must be at least 8 characters to be valid in this field');
+        return false;
+      }
+      if(tpname.length>15)
+      {
+        alert('TutorName must be less than 15 characters to be valid in this field');
+        return false;
+      }
+
+      if(uname.length<4)
+      {
+        alert('USERName must be at least 4 characters to be valid in this field');
+        return false;
+      }
+      else
+      {
+        return true;
+      }
+
+    }
+
+  </script>
+
+
+</center></body>
+</html>

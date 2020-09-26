@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>INSERT SCHEDULE</title>
+	
+<script type="text/javascript">
+function validate()
+{var id = document.forms["logform"]["id"].value;
+if(id==""){
+	alert("Id Can't Be Empty");
+return false;
+
+}
+
+
+	var name = document.forms["logform"]["uname"].value;
+if(name==""){
+	alert("Name Can't Be Empty");
+return false;
+
+}
+
+if(name.length<3){
+	alert("Name Can;t Be Less Than 3 Letters");
+return false;
+
+}
+
+
+var day = document.forms["logform"]["day"].value;
+
+if(day==""){
+	alert("Day Can't Be Empty");
+return false;
+
+}
+var time = document.forms["logform"]["time"].value;
+if(time==""){
+	alert("Time Can't Be Empty");
+return false;
+
+}	
+	
+}
+</script>
+</head>
+<body>
+<fieldset>
+<h1>INSERT SCHEDULE</h1>
+	<form name="logform" onsubmit="return validate()" action="" method="POST">
+
+	id<br/>
+		<input type="text" name="id" value=""/><br/>
+	
+	
+		name<br/>
+		<input type="text" name="uname" value=""><br/>
+		
+
+		
+		day<br/>
+		<input type="text" name="day" value=""/><br/>
+		time<br/>
+		<input type="text" name="time" value=""/><br/><br/>
+		
+		
+	
+		
+		<input type="submit" name="submit" value="Submit"> 
+		<a href ='/home/schedule'>Check List Here</a><br/><br/>
+	
+	</form>
+	
+			</fieldset>
+			
+		
+</body>
+</html>

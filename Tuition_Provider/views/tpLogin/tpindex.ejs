@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOGIN</title>
+<!-- <link rel="stylesheet" type="text/css" href="tpic/style.css"> -->
+	<style rel="stylesheet">
+
+body
+{
+	background: rgb(0,128,128);
+	width: 1000px auto;
+	text-align: center;
+}
+#LOGIN_form h1
+{
+	background-color: rgb(0,128,128);
+	color: white;
+}
+
+#LOGIN_form
+{
+  width: 800px;
+  margin: 100px;
+  padding-bottom: 30px;
+  border: 1px solid #918274;
+  border-radius: 20px;
+  color: black;
+  font-family: "Elephant", Times, serif;
+  font-size: 25px;
+  background: rgb(192,192,192);
+}
+#LOGIN_form input
+{
+	text-align: center;
+}
+
+{
+
+  width: 800px;
+  height: 100px;
+  font-family: "Comic Sans MS", Times, serif;
+  font-size: 30px;
+}
+#name
+{
+	width: 500px auto;
+  height: 40px;
+  font-family: "Comic Sans MS", Times, serif;
+  font-size: 30px;
+}
+#password
+{
+	width: 500px auto;
+  height: 40px;
+  font-family: "Comic Sans MS", Times, serif;
+  font-size: 30px;
+}
+#submit
+{
+  height: 50px;
+  width: 200px;
+  font-family: "Algerian";
+  font-size: 40px;
+  color: rgb(0,255,0);
+  background: black;
+  border: none;
+  border-radius: 5px;
+}
+a
+{
+
+  height: 50px;
+  width: 40px;
+  font-size: 30px;
+  color: red;
+  background-color: rgb(255,255,33);
+  text-decoration: underline-bold;
+  border-radius: 5px;
+
+}
+
+
+</style>
+
+		<script type="text/javascript">
+function validate()
+{
+	var name = document.forms["logform"]["uname"].value;
+if(name==""){
+	alert("Username is BLANK !!");
+return false;
+
+}
+var password = document.forms["logform"]["password"].value;
+
+if(password==""){
+	alert("Password is BLANK !!");
+return false;
+
+}
+
+
+}
+
+function onlyalphabets(e)
+{
+		var name=e.which||e.keycode;
+
+
+/*ASCII code: 		65-90>> UPPERCASE
+					8>>   	Backspace,
+					95>>  	underscore[_]
+					32>>	space
+*/
+
+		if((name>=65 && name<=90) || (name==95) || (name==32) || (name>=97 && name<=122) || (name==8))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+
+}
+
+</script>
+
+<style rel="stylesheet">
+
+	body
+	{
+		background: rgb(255,154,53);
+	}
+
+</style>
+
+</head>
+<body><center>
+		<form id="LOGIN_form" name="logform" onsubmit="return validate()" method="POST">
+			<fieldset>
+				<h1>LOGIN</h1>
+				<table>
+					<tr>
+						<th>USERNAME</th>
+						<td><input type="text" name="uname" id="name" onkeypress='return onlyalphabets(event)' ></td>
+					</tr>
+					<tr>
+						<th>PASSWORD</th>
+						<td><input type="password" id="password" name="password"></td>
+					</tr>
+					<tr></tr>
+					<tr></tr>
+					<tr>
+						<td><a href="/tpRegistration">Registration</a></td>
+						<td><input type="submit" id="submit" name="submit" value="L O G I N"></td>
+					</tr>
+				</table>
+			</fieldset>
+		</form>
+</center></body>
+</html>

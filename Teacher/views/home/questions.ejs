@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UPLOADED QUESTIONS</title>
+			<style type="text/css">	
+	table{
+	border-collapse: collapse;
+	width: 100%;
+	color: #d96459;
+	font-family: monospace;
+	font-size: 25px;
+	text-align: left;
+	}
+	th{
+		background-color: #d96459;
+		color: white;
+		}
+		tr:nth-child(even) {background-color: #f2f2f2;}
+ 
+</style>
+	
+</head>
+<body>
+<fieldset>
+
+<h1>UPLOADED QUESTIONS</h1>
+<table border="1">
+		<tr>
+			<th>id</th>
+			<th>name</th>
+			<th>question</th>
+			<th>date</th>	
+			<th>operation</th>
+		
+		</tr>
+      <% for(var i=0; i < results.length; i++){ %>
+		
+		<tr>
+			<td><%= results[i].id %></td>
+			<td><%= results[i].name %></td>
+			<td><%= results[i].question %></td>
+			<td><%= results[i].date %></td>
+			
+			<td><a href="/home/exam/take/questions/delete/<%= results[i].id %>"> Delete </a></td>
+		</tr>
+		<% } %>
+	</table>
+	<br/>
+		
+		<a href="/home/exam/take">Back</a>
+		<a href="/home">Go To Home Page</a>
+		<br/><br/>
+	
+		
+			
+		</fieldset>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>REGISTRATION</title>
+	<!-- <link rel="stylesheet" type="text/css" href="abc/style.css"> -->
+<style rel="stylesheet">
+
+	body
+	{
+		background: rgb(255,154,53);
+	}
+
+	#reg h1
+	{
+	  text-align: center;
+		height: 60px;
+		font-size: 50px;
+	  border-radius: 150px;
+	  border-top: 100px;
+	  color: yellow;
+	  background: black;
+	}
+
+	#reg
+	{
+  	text-align:left;
+  	width: 900px;
+  	margin: 40px auto;
+  	border: 3px solid #918274;
+  	border-radius: 50px;
+  	border-top: 100px;
+  	color: white;
+  	font-size: 30px;
+  	background: rgb(0,0,112);
+	}
+
+	#name
+	{
+		text-align: left;
+		width: 600px;
+	  border: 3px solid #918274;
+	  border-radius: 50px;
+	  border-top: 100px;
+	  color: rgb(0,0,112);
+	  font-size: 30px;
+	  background: white;
+	}
+	#pass
+	{
+	  width: 600px;
+	  border: 3px solid #918274;
+	  border-radius: 50px;
+	  border-top: 100px;
+	  color: rgb(0,0,112);
+	  font-size: 30px;
+	  background: white;
+	}
+	#email
+	{
+	  width: 600px;
+	  border: 3px solid #918274;
+	  border-radius: 50px;
+	  border-top: 100px;
+	  color: rgb(0,0,112);
+	  font-size: 30px;
+	  background: white;
+	}
+	#gen
+	{
+		text-align: center;
+		width: 120px;
+	  border: 3px solid #918274;
+	  border-radius: 50px;
+	  border-height: 250px;
+	  color: rgb(0,0,112);
+	  font-size: 30px;
+	  background: white;
+	}
+	#edu
+	{
+		text-align: center;
+		width: 200px;
+		border: 3px solid #918274;
+		border-radius: 50px;
+		border-height: 250px;
+		color: rgb(0,0,112);
+		font-size: 30px;
+		background: white;
+	}
+	#tou
+	{
+		text-align: center;
+		width: 250px;
+		border: 3px solid #918274;
+		border-radius: 50px;
+		border-height: 250px;
+		color: rgb(0,0,112);
+		font-size: 30px;
+		background: white;
+	}
+
+	#submit
+	{
+		text-align: center;
+		height: 60px;
+	  width: 500px;
+	  font-family: "Algerian";
+	  font-size: 35px;
+		color: yellow;
+		border:  none;
+		border-align: left;
+		border-radius: 5px;
+	}
+	#submit input
+	{
+		font-family: "Algerian";
+	  font-size: 35px;
+		color: yellow;
+	  background-color: black;
+
+	}
+	a
+	{
+	  height: 60px;
+	  margin: 5px 10%;
+	  font-size: 35px;
+	  color: red;
+	  background-color: yellow;
+	  text-decoration: underline-bold;
+	  border-radius: 5px;
+	}
+
+</style>
+
+
+	<script type="text/javascript">
+function valid()
+{
+var name = document.forms["myform"]["uname"].value;
+
+
+
+if(name==""){
+	alert("Username is BLANK !!");
+return false;
+
+}
+
+
+
+if(name.length<4){
+	alert("Username Must be at least 4 Letters");
+	return false;
+}
+
+var password = document.forms["myform"]["password"].value;
+
+if(password==""){
+	alert("Password is BLANK !!");
+return false;
+
+}
+
+if(password.length<6){
+	alert("Password Can't Be Less Than 6 Characters or Digits");
+return false;
+
+}
+
+var email = document.forms["myform"]["email"].value;
+if(email==""){
+	alert("Email is BLANK !!");
+return false;
+
+}
+
+
+var at=email.indexOf('@');
+var dot=email.lastIndexOf('.');
+if(at<=0 || at+1 >= dot || dot+1 >=email.length-1)
+
+{
+alert("inVaLid Email Address !!");
+return false;
+
+}
+
+var gender = document.forms["myform"]["gender"].value;
+
+if(gender==""){
+	alert("Gender is BLANK !!");
+return false;
+
+}
+
+var education = document.forms["myform"]["education"].value;
+
+if(education==""){
+	alert("Education is BLANK !!");
+return false;
+
+}
+
+var type = document.forms["myform"]["type"].value;
+
+if(type==""){
+	alert("Type is BLANK !!");
+return false;
+
+}
+
+}
+</script>
+<script type="text/javascript">
+
+function onlyalphabets(e)
+{
+		var name=e.which||e.keycode;
+
+
+	/*ASCII code: 		65-90>> UPPERCASE
+										97-122>> lowercase
+										8>>   	Backspace,
+										95>>  	underscore[_]
+										32>>	space
+	*/
+
+			if((name>=65 && name<=90) || (name==95) || (name==32) || (name>=97 && name<=122) || (name==8))
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+
+}
+</script>
+
+
+</head>
+
+
+<body><center>
+
+	<form id="reg" name="myform" onsubmit="return valid()" method="POST">
+		<center><h1>R E G I S T R A T I O N</h1></center>
+		<table>
+			<tr>
+				<td><b>USERNAME</b></td>
+				<td><input type="text" id="name" name="uname" value=""  onkeypress='return onlyalphabets(event)' ></td>
+			</tr>
+			<tr></tr>
+			<tr></tr>
+			<tr>
+				<td><b>PASSWORD</b></td>
+				<td><input type="password" id="pass" name="password" value=""></td>
+				<td> </td>
+				<td> </td>
+				<td> </td>
+			</tr>
+			<tr></tr>
+			<tr></tr>
+			<tr>
+				<td><b>EMAiL</b></td>
+				<td><input type="email" id="email" name="email" value=""></td>
+				<td> </td>
+				<td> </td>
+				<td> </td>
+			</tr>
+			<tr></tr>
+			<tr></tr>
+			<tr>
+				<td><br><b><div id="gen">GENDER</div></b></td>
+				<td><br><input type="radio" name="gender" value="M">Male
+				<input type="radio" name="gender" value="F">Female</td>
+				<td> </td>
+				<td> </td>
+				<td> </td>
+			</tr>
+			<tr></tr>
+			<tr></tr>
+			<tr>
+
+				<td><b><div id="edu">EDUCATION</div></b></td>
+				<td><input type="radio" name="education" value="ssc">S.S.C
+				<input type="radio" name="education" value="hsc">H.S.C
+				<input type="radio" name="education" value="bsc">B.Sc</td>
+				<td> </td>
+			</tr>
+			<tr></tr>
+			<tr></tr>
+			<tr>
+				<td><b><div id="tou">TYPE OF USER</div></b><br></td>
+				<td><input type="radio" name="type" value="admin">Admin
+					<input type="radio" name="type" value="tp" />Tution Provider
+					<input type="radio" name="type" value="teacher" />Teacher
+					<input type="radio" name="type" value="student" />Student
+					<br><br>
+				</td>
+			</tr>
+			<tr></tr>
+			<tr></tr>
+			<tr></tr>
+	</table>
+	<table>
+			<tr>
+				<td>
+					<div id="submit"><input type="submit" name="submit" value="R E G I S T E R">
+					<input type="reset" name="reset" value="REFRESH"></div>
+					<td><a href="/tpLogin">LOGiN</a></td>
+				</td>
+			</tr>
+	</table>
+
+	</form>
+</center></body>
+</html>

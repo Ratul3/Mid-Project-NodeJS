@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TEACHERS INFORMATION</title>
+		
+	<style type="text/css">	
+	table{
+	border-collapse: collapse;
+	width: 100%;
+	color: #d96459;
+	font-family: monospace;
+	font-size: 25px;
+	text-align: left;
+	}
+	th{
+		background-color: #d96459;
+		color: white;
+		}
+		tr:nth-child(even) {background-color: #f2f2f2;}
+ 
+</style>
+</head>
+<body>
+		<form>
+			<fieldset>
+				<legend><h1>TEACHERS INFORMATION</h1></legend>
+				<table border="1">
+		<tr>
+			<th>id</th>
+			<th>name</th>
+			<th>email</th>		
+			<th>gender</th>
+			<th>education</th>
+		</tr>
+
+		<% for(var i=0; i < userList.length; i++){ %>
+		<tr>
+			<td><%= userList[i].id %></td>
+			<td><%= userList[i].username %></td>
+			<td><%= userList[i].email %></td>
+			<td><%= userList[i].gender %></td>
+			<td><%= userList[i].education %></td>
+			
+		</tr>
+		<% } %>
+	</table><br/>
+				
+				<a href="/home">Back</a>
+				
+			</fieldset>
+			
+		</form>
+</body>
+</html>
